@@ -1,0 +1,28 @@
+{
+  "name": "jquery-datetimepicker",
+  "authors": [
+    "Jean Pereira <jean.pereira@philips.com>"
+  ],
+  "description": "",
+  "main": "jquery.datetimepicker.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "fc8569c556",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "fc8569c55651d8eda6331e220e6bf35d1ef86d12"
+  },
+  "_source": "http://gitlab.portal.whebdc.com.br/open-source/jquery-datetimepicker.git",
+  "_target": "*",
+  "_originalSource": "http://gitlab.portal.whebdc.com.br/open-source/jquery-datetimepicker.git"
+}

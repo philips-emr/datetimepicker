@@ -1,0 +1,19 @@
+{
+  "name": "jquery-datetimepicker",
+  "authors": [
+    "Jean Pereira <jean.pereira@philips.com>"
+  ],
+  "description": "",
+  "main": "jquery.datetimepicker.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
