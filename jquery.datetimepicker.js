@@ -814,6 +814,7 @@
 			VKEY = 86,
 			ZKEY = 90,
 			YKEY = 89,
+			SLASH = [193, 111],
 			ctrlDown	=	false,
 			options = ($.isPlainObject(opt) || !opt) ? $.extend(true, {}, default_options, opt) : $.extend(true, {}, default_options),
 
@@ -992,6 +993,9 @@
 							.replace(/([0-9]{1})/g, '{digit$1}')
 							.replace(/\{digit([0-9]{1})\}/g, '[0-$1_]{1}')
 							.replace(/\{digit[\+]\}/g, '[0-9_]{1}');
+
+						reg = `(${reg}){0,1}`;
+
 						return (new RegExp(reg)).test(value);
 					};
 				options = $.extend(true, {}, options, _options);
@@ -1201,7 +1205,7 @@
 									input.trigger('error_input.xdsoft');
 								}
 							} else {
-								if (([AKEY, CKEY, VKEY, ZKEY, YKEY].indexOf(key) !== -1 && ctrlDown) || [ESC, ARROWUP, ARROWDOWN, ARROWLEFT, ARROWRIGHT, F5, CTRLKEY, TAB, ENTER].indexOf(key) !== -1) {
+								if (([AKEY, CKEY, VKEY, ZKEY, YKEY].indexOf(key) !== -1 && ctrlDown) || [ESC, ARROWUP, ARROWDOWN, ARROWLEFT, ARROWRIGHT, F5, CTRLKEY, TAB, ENTER].indexOf(key) !== -1 || SLASH.indexOf(key) !== -1) {
 									return true;
 								}
 							}
