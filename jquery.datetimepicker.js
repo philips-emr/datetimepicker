@@ -994,7 +994,7 @@
 							.replace(/\{digit([0-9]{1})\}/g, '[0-$1_]{1}')
 							.replace(/\{digit[\+]\}/g, '[0-9_]{1}');
 
-						reg = `(${reg}){0,1}`;
+						reg = '(' + reg + '){0,1}'
 
 						return (new RegExp(reg)).test(value);
 					};
