@@ -2037,7 +2037,8 @@
 			input
 				.data('xdsoft_datetimepicker', datetimepicker)
 				.on('open.xdsoft focusin.xdsoft mousedown.xdsoft touchstart', function (event) {
-					if (input.is(':disabled') || (input.data('xdsoft_datetimepicker').is(':visible') && options.closeOnInputClick)) {
+					if (input.is(':disabled') || (input.data('xdsoft_datetimepicker').is(':visible') && options.closeOnInputClick) || input.is(':keepclose')) {
+						input.prop(':keepclose', false);
 						return;
 					}
 					clearTimeout(timer);
