@@ -602,6 +602,15 @@
 			// Override Parse and Format Library entities
 			Date.monthNames = default_options.i18n[globalLocale].months;
 			Date.dayNames = default_options.i18n[globalLocale].dayOfWeek;
+		},
+		setDetail: function(detail, input){
+			var detailDiv = $(detail);
+			if(detailDiv != undefined){
+				detailDiv
+					.on('mousewheel.xdsoft', function (event) {
+						input.datetimepicker('hide');
+					});
+			}
 		}
 	};
 
