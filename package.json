@@ -1,0 +1,13 @@
+{
+  "name": "jquery-datetimepicker",
+  "description": "",
+  "version": "1.0.0",
+  "private": true,
+  "main": "jquery.datetimepicker.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philips-emr/datetimepicker.git"
+  },
+  "author": "Thiago Teixeira <thiago.teixeira@philips.com>",
+  "license": "MIT"
+}
