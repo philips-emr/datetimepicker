@@ -1,0 +1,10 @@
+version: 1
+
+# Business category according to https://share.philips.com/sites/SWCoE/Lists/List%20of%20Business%20Categories/AllItems.aspx
+business-category: 32 # EMR
+business-category-details: https://share.philips.com/sites/SWCoE/Lists/List%20of%20Business%20Categories/DispForm.aspx?ID=32
+
+# Export control according to https://portal.internal.philips/catalog/default/component/developer-portal/docs/export-control
+export-control-eccn: EAR99
+export-control-rationale: Based on export control screening questionnaire results
+export-control-sgi: 3
