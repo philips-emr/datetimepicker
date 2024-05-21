@@ -1,0 +1,21 @@
+name: 'Fortify On-Demand Scan'
+
+run-name: 'Fortify Scan on (#${{inputs.branch}}) branch'
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        type: string
+        description: Branch
+        required: true
+jobs:
+  fortify_scan:
+    name: 'Fortify Scan'
+    uses: philips-internal/emr-devops-actions/.github/workflows/reusable_fortify_node_scan.yml@develop
+    with:
+      repository_name: 'datetimepicker'
+      application: 'EMR-CM-TECHNOLOGY'
+      repository_url: 'philips-internal/datetimepicker'
+      branch: ${{inputs.branch}}
+    secrets: inherit

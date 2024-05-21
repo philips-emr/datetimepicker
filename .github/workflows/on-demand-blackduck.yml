@@ -1,0 +1,23 @@
+name: 'BlackDuck On-Demand Scan'
+
+run-name: 'BlackDuck Scan on (#${{inputs.branch}}) branch'
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        type: string
+        description: Branch
+        required: true
+
+jobs:
+  black_duck_scan:
+    name: 'BlackDuck Scan'
+    uses: philips-internal/emr-devops-actions/.github/workflows/reusable_blackduck_node_scan.yml@develop
+    with:
+      repository_name: 'datetimepicker'
+      project_name: 'EMR-CM-TECHNOLOGY'
+      repository_url: 'philips-internal/datetimepicker'
+      branch: ${{inputs.branch}}
+      runner: 'philips-emr-bnu'
+    secrets: inherit
