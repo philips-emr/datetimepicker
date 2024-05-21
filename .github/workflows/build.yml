@@ -1,0 +1,14 @@
+name: Build Workflow
+run-name: Build Workflow ${{ github.base_ref}}
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - '[0-9]+\.[0-9]+\.x'
+  workflow_dispatch: 
+
+jobs:
+  build-publish:
+      uses: philips-internal/emr-devops-actions/.github/workflows/reusable_npm_library_semver.yml@develop
+      secrets: inherit

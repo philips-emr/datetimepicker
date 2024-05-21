@@ -1,7 +1,7 @@
 {
-  "name": "jquery-datetimepicker",
+  "name": "@philips-internal/emr-jquery-datetimepicker",
   "description": "",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "main": "jquery.datetimepicker.js",
   "repository": {
